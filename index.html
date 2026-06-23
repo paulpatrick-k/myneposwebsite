@@ -48,6 +48,14 @@
       font-size: 2.5rem;
       margin-bottom: 20px;
     }
+    .version-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
     .btn {
       display: inline-block;
       background: #ff6b6b;
@@ -56,12 +64,31 @@
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 20px;
+      margin: 10px 10px 0 0;
       transition: 0.3s;
     }
     .btn:hover {
       background: #ff4757;
       transform: scale(1.05);
+    }
+    .btn-secondary {
+      background: #2ed573;
+    }
+    .btn-secondary:hover {
+      background: #26de81;
+    }
+    .btn-download {
+      background: #1e90ff;
+    }
+    .btn-download:hover {
+      background: #0077e6;
+    }
+    .download-section {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     .features {
       padding: 50px 0;
@@ -78,6 +105,11 @@
       padding: 20px;
       border-radius: 10px;
       text-align: center;
+      transition: 0.3s;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     .video-demo {
       background: #2c3e50;
@@ -94,6 +126,12 @@
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
+      border-radius: 10px;
+    }
+    .version-info {
+      color: #888;
+      font-size: 0.8rem;
+      margin-top: 10px;
     }
     footer {
       background: #1e272e;
@@ -104,6 +142,8 @@
     }
     @media (max-width: 768px) {
       .hero h1 { font-size: 1.8rem; }
+      .download-section { flex-direction: column; align-items: center; }
+      .btn { display: block; width: 80%; margin: 10px auto; }
     }
   </style>
 </head>
@@ -117,22 +157,26 @@
 
   <section class="hero">
     <div class="container">
+      <div class="version-badge">📦 Version 1.0.0+1 • Released June 2026</div>
       <h1>Offline‑First Point of Sale for Modern Retailers</h1>
       <p>Multi‑tenant, multi‑currency, stock control, staff management, and Paystack payments – works even without internet.</p>
-      <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
-        <a href="/app-release.apk" class="btn" download>📱 Download for Android (APK)</a>
-        <a href="/myne_pos_windows.zip" class="btn" download>💻 Download for Windows (ZIP)</a>
+      
+      <div class="download-section">
+        <a href="/app-release.apk" class="btn btn-download" download>📱 Download Android (APK)</a>
+        <a href="/myne_pos_windows.zip" class="btn btn-secondary" download>💻 Download Windows (ZIP)</a>
       </div>
+      
+      <p class="version-info">⚡ Full inventory management • Offline mode • Multi-branch • Stock periods • Purchase orders</p>
     </div>
   </section>
 
   <section class="features">
     <div class="container">
-      <h2 style="text-align:center">Why MYNE POS?</h2>
+      <h2 style="text-align:center">✨ Why MYNE POS?</h2>
       <div class="features-grid">
         <div class="feature-card">📱 Offline‑First – Sell anytime, sync later</div>
         <div class="feature-card">💱 Multi‑Currency & Country Support</div>
-        <div class="feature-card">📦 Inventory & Low Stock Alerts</div>
+        <div class="feature-card">📦 Full Inventory & Stock Management</div>
         <div class="feature-card">👥 Staff Roles & Audit Logs</div>
         <div class="feature-card">📊 Daily/Monthly Reports</div>
         <div class="feature-card">🔐 7‑Day Trial → Paystack Subscription</div>
@@ -142,16 +186,16 @@
 
   <section class="video-demo">
     <div class="container">
-      <h2>See MYNE POS in Action</h2>
+      <h2>🎬 See MYNE POS in Action</h2>
       <div class="video-container">
-        <p>🎥 Demo video coming soon!</p>
+        <p>📹 Demo video coming soon!</p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <p>Contact: support@myne.com | © 2025 MYNE POS</p>
+      <p>+254 718 818 960 | © 2026 MYNE POS</p>
     </div>
   </footer>
 </body>
