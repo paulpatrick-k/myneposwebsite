@@ -133,9 +133,24 @@
       font-size: 0.85rem;
     }
     .version-info {
-      color: #888;
+      color: #aaa;
       font-size: 0.8rem;
       margin-top: 10px;
+    }
+    .old-version-section {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .old-version-section p {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      margin-bottom: 10px;
+    }
+    .old-version-section .btn-outline {
+      font-size: 0.8rem;
+      padding: 6px 16px;
+      margin: 4px;
     }
     .features {
       padding: 50px 0;
@@ -191,6 +206,14 @@
       color: #666;
       font-size: 0.85rem;
     }
+    .changelog .badge-new {
+      background: #2ed573;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-left: 8px;
+    }
     footer {
       background: #1e272e;
       color: #a4b0be;
@@ -225,7 +248,7 @@
           <div class="version-tag">⭐ Latest</div>
           <h3>📱 Android</h3>
           <a href="/app-release-v1.0.0+2.apk" class="btn btn-primary" download>Download v1.0.0+2</a>
-          <small style="opacity:0.7; display:block; margin-top:5px;">55.1 MB</small>
+          <small style="opacity:0.7; display:block; margin-top:5px;">55.2 MB</small>
         </div>
         <div class="download-card">
           <div class="version-tag">⭐ Latest</div>
@@ -236,15 +259,15 @@
       </div>
 
       <!-- OLD VERSION - Secondary Download -->
-      <div style="margin-top: 20px; opacity: 0.7;">
-        <p style="font-size: 0.85rem;">⬇️ Need an older version?</p>
+      <div class="old-version-section">
+        <p>⬇️ Need an older version? These are still available:</p>
         <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-          <a href="/app-release-v1.0.0+1.apk" class="btn btn-outline btn-sm" download>Android v1.0.0+1</a>
-          <a href="/myne_pos_windows-v1.0.0+1.zip" class="btn btn-outline btn-sm" download>Windows v1.0.0+1</a>
+          <a href="/app-release-v1.0.0+1.apk" class="btn btn-outline btn-sm" download>📱 Android v1.0.0+1</a>
+          <a href="/myne_pos_windows-v1.0.0+1.zip" class="btn btn-outline btn-sm" download>💻 Windows v1.0.0+1</a>
         </div>
       </div>
       
-      <p class="version-info">⚡ Full inventory management • Offline mode • Multi-branch • Stock periods • Purchase orders</p>
+      <p class="version-info">⚡ Full inventory management • Offline mode • Multi-branch • Stock periods • Purchase orders • Expense tracking</p>
     </div>
   </section>
 
@@ -267,13 +290,16 @@
     <div class="container">
       <h2 style="text-align:center; margin-bottom: 30px;">📋 What's New</h2>
       <div style="max-width: 700px; margin: 0 auto;">
-        <h3>v1.0.0+2 (June 2026)</h3>
+        <h3>v1.0.0+2 (June 2026) <span class="badge-new">NEW</span></h3>
         <ul>
           <li>✅ Added 4 new business categories: Electronics, Timberyard, Tree Nursery, General Store</li>
           <li>✅ Fixed branch name display (shows "Main Store" instead of ID)</li>
           <li>✅ Fixed staff email visibility in management list</li>
           <li>✅ Allowed same email for multiple businesses</li>
           <li>✅ Improved stock period management UI</li>
+          <li>✅ Added Transactions (Expenses & Miscellaneous) for admin</li>
+          <li>✅ Stock Transfer now shows branch names and item dropdown</li>
+          <li>✅ Fixed item pagination (shows all items, not just 30)</li>
         </ul>
         
         <h3 style="margin-top: 20px;">v1.0.0+1 (June 2026)</h3>
@@ -299,7 +325,7 @@
 
   <footer>
     <div class="container">
-      <p>+254 718 818 960 | © 2026 MYNE POS</p>
+      <p>For support Whatsapp or Call | +254 718 818 960 | © 2026 MYNE POS</p>
     </div>
   </footer>
 </body>
